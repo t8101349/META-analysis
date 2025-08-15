@@ -1,2 +1,2 @@
 # META-analysis
-for GWAS
+for SNP GWAS
