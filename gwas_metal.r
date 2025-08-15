@@ -98,4 +98,5 @@ meta_results <- meta_data[!is.na(LOG_OR_SE_adj) & !is.na(OR_mvp), {
 
 fwrite(meta_results, "meta_results.txt", sep = "\t")
 
+
 # Rscript /home/Weber/Metal/gwas_metal.r MVP_R4.1000G_AGR.Phe_185.META.GIA.dbGaP.txt.gz GWAS/ISPROSTATECANCER_TPMI_imputed_adjGWAS.glm.logistic
