@@ -70,7 +70,7 @@ output_df <- merge_dataframe %>%
 
 # Step 3: 輸出合併後檔案
 last <- sub(".*_", "", out)
-output_name <- paste0("finaloutput_", last, "_input")
+output_name <- paste0("finaloutput_", last, "_input.txt")
 fwrite(output_df, output_name, sep = "\t", na = "NA")
 
 # Step 4: 使用 topr 套件進行後續分析
