@@ -19,6 +19,7 @@ Help()
     echo "  -p | --pheno       : Phenotype name, used for output file naming."
 	echo "  -m | --mvp         : Summary statisitcs file of mvp_meta."
 	echo "  -g | --gwas        : Summary statisitcs file of GWAS."
+    echo "  -n | --num         : Numbers of samples to GWAS (default: 500000)"
     echo "  -t | --target      : Target sample prefix for PRS-CS after GWAS (Optional)."
 	echo "  -v | --valid       : Validation sample prefix for PRS-CS after GWAS (Optional)."
 	echo 
@@ -28,7 +29,7 @@ Help()
 metafor_path='/home/Weber/Metal/metafor.r'
 metal_r_path='/home/Weber/Metal/gwas_metal.r'
 meta_merge_path='/home/Weber/Pipeline/META/meta_merge.py'
-
+num = 500000
 
 re='^(--help|-h)$'
 if [[ $1 =~ $re ]];
@@ -40,6 +41,7 @@ else
             -p|--pheno) pheno="$2"; shift 2;;
             -m|--mvp) mvp="$2"; shift 2;;
 			-g|--gwas) gwas="$2"; shift 2;;
+			-n|--num) num="$2"; shift 2;;
             -t|--target) target="$2"; shift 2;;
             -v|--valid) valid="$2"; shift 2;;
 			*) echo "unknown option: $1" >&2; exit 1;;
@@ -90,7 +92,7 @@ else
                     -b /SNParray/SourceShare/20240321_50w_Imputation/step12-pgen2bed/Axiom_imputed_r2.MAF \
                     -g finaloutput_fixed_input.txt \
                     -v v2 \
-                    -n 500000 \
+                    -n $num \
                     -c all \
                     -o meta_prs/${pheno}_fixed_META_PRS \
                     --target_list $target \
