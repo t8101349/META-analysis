@@ -5,7 +5,6 @@
 # Update: 2025.08.13
 # version: 1.0
 # Parameters: typing "bash metal.sh --help"
-# example: bash /home/Weber/Pipeline/META/metal.sh -p oralcancer -m MVP_R4.1000G_AGR.Phe_145.META.GIA.dbGaP.txt.gz -g GWAS/ISORALCANCER_TPMI_imputed_adjGWAS.glm.logistic
 # ===============================================================
 #! /usr/bin/bash
 
