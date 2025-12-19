@@ -88,7 +88,7 @@ else
         echo -e "[INFO] Valid set: $valid"
 
         # 需調整
-        prscsx_cmd="bash /home/Weber/Pipeline/PRS/PRSCSX_for_target.sh \
+        prscsx_cmd="bash /home/Weber/Pipeline/PRScsx/PRSCSX_for_target.sh \
                     -b /SNParray/SourceShare/20240321_50w_Imputation/step12-pgen2bed/Axiom_imputed_r2.MAF \
                     -g finaloutput_fixed_input.txt \
                     -v v2 \
@@ -105,7 +105,7 @@ else
 
         # echo -e "[INFO] finish fixed_meta PRSCSX"
         #  # 需調整
-        # prscsx_cmd="bash /home/Weber/Pipeline/PRS/PRSCSX_for_target.sh \
+        # prscsx_cmd="bash /home/Weber/Pipeline/PRScsx/PRSCSX_for_target.sh \
         #             -b /SNParray/SourceShare/20240321_50w_Imputation/step12-pgen2bed/Axiom_imputed_r2.MAF \
         #             -g finaloutput_random_input.txt \
         #             -v v2 \
